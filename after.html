@@ -1,0 +1,1617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+  <meta name="Generator" content="Microsoft Word 15 (filtered)"/>
+
+  <script>
+//<![CDATA[
+ 	function gradeQuiz() {
+
+ var correctAnswers = {
+  q1: "b",
+  q2: "c",
+  q3: "c",
+  q4: "c",
+  q5: "a",
+  q6: "b",
+  q7: "d",
+  q8: "a",
+  q9: "c",
+  q10: "b"
+};
+
+var score = 0;
+var userAnswers = {};
+
+function getSelectedOption(questionName) {
+  var inputs = document.getElementsByName(questionName);
+  var selectedOption = null;
+
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].checked) {
+      selectedOption = inputs[i];
+      break;
+    }
+  }
+
+  return selectedOption;
+}
+
+for (var i = 1; i <= 10; i++) {
+  var questionName = "q" + i;
+  var selectedOption = getSelectedOption(questionName);
+  if (selectedOption) {
+    var userAnswer = selectedOption.value;
+    userAnswers[questionName] = userAnswer;
+
+    if (userAnswer === correctAnswers[questionName]) {
+      score++;
+    }
+  }
+}
+
+
+
+var resultsDiv = document.getElementById("results");
+resultsDiv.innerHTML = "<h2>Results</h2><b>Nilai anda: " + score + "0</b>";
+
+for (var i = 1; i <= 10; i++) {
+  var questionName = "q" + i;
+  var correctAnswer = correctAnswers[questionName];
+  var userAnswer = userAnswers[questionName];
+
+  resultsDiv.innerHTML += "<p>Soal " + i + ": ";
+  if (userAnswer === correctAnswer) {
+    resultsDiv.innerHTML += "Benar";
+  } else {
+    resultsDiv.innerHTML += "Salah. Jawaban yang benar: " + correctAnswer;
+  }
+  resultsDiv.innerHTML += "</p>";
+}
+
+
+
+}
+//]]>
+</script>
+<style>
+    * {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #fffdd0;
+    color: #333333;
+}
+
+body{
+    padding: 0 30px 30px 50px;
+}
+li.MsoListParagraph {
+        line-height: 35px;
+    }
+</style>
+
+<title></title>
+</head>
+
+<br lang="EN-ID" link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+  <br class="WordSection1">
+    <!-- class="MsoNormal" -->
+    <h1 style="text-align:center; padding-top: 50px;">MODUL AJAR <br> TEKNIK JARINGAN KOMPUTER DAN TELEKOMUNIKASI</h1>
+  <br></br>
+    <h3 class="MsoNormal">KEGIATAN PEMBELAJARAN</h3>
+
+    <h2 class="MsoListParagraph" style='text-align:justify;text-indent:-18.0pt;
+line-height:150%' id="sigil_toc_id_1"><b><span style='font-size:12.0pt;line-height:150%;'>1.</span></b><b><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Identitas Modul</span></b></h2>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>a.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Nama Penyusun&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; : Ahmad Baqi</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>b.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Satuan Pendididkan &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; : SMKN 4 X</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>c.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Fase&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; : E</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>d.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Program Keahlian&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; : Teknik Jaringan Komputer dan Telekomunikasi</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>e.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Alokasi Waktu&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; : 8 x 45 Menit ( 1 Pertemuan)</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>f.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Model&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; : Problem Based Learning</span></p>
+
+    <h2 class="MsoListParagraph" style='text-align:justify;text-indent:-18.0pt;
+line-height:150%' id="sigil_toc_id_2"><b><span style='font-size:12.0pt;line-height:150%;'>2.</span></b><b><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Profil Pelajar Pancasila</span></b></h2>
+
+    <p class="MsoListParagraph" style='text-align:justify;line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;Beriman, Bertaqwa kepada Tuhan Yang Maha Esa, dan Berakhlak Mulia, Mandiri, Bernalar Kritis dan Kreatif</span></p>
+
+    <h2 class="MsoListParagraph" style='text-align:justify;text-indent:-18.0pt;
+line-height:150%' id="sigil_toc_id_3"><b><span style='font-size:12.0pt;line-height:150%;'>3.</span></b><b><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Tujuan Pembelajaran</span></b></h2>
+
+    <p class="MsoListParagraph" style='text-align:justify;line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;Peserta didik mampu menjelaskan konsep komunikasi data pada Protocol TCP/IP dengan lancar dan menyebutkan perbedaan antara protocol TCP/IP dan OSI Layer dengan kolaborasi dengan rekan</span></p>
+
+    <p class="MsoListParagraph" style='text-align:justify;text-indent:-18.0pt;
+line-height:150%'><b><span style='font-size:12.0pt;line-height:150%;'>4.</span></b><b><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Pertanyaan Pematik</span></b></p>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>a.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Apa yang dimaksud dengan komunikasi data?</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>b.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Sebutkan minimal 2 jenis standar komunikasi data ?</span></p>
+
+    <h2 class="MsoListParagraph" style='text-align:justify;text-indent:-18.0pt;
+line-height:150%' id="sigil_toc_id_4"><b><span style='font-size:12.0pt;line-height:150%;'>5.</span></b><b><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Sarana Prasarana</span></b></h2>
+
+    <p class="MsoListParagraph" style='text-align:justify;line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;Buku Paket, Pc/Laptop, Infokus, Internet dan lainnya.</span></p>
+
+    <h2 class="MsoListParagraph" style='text-align:justify;text-indent:-18.0pt;
+line-height:150%' id="sigil_toc_id_5"><b><span style='font-size:12.0pt;line-height:150%;'>6.</span></b><b><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Karakteristik Peserta Didik</span></b></h2>
+
+    <p class="MsoListParagraph" style='text-align:justify;line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;Peserta didik regular / tipikal (tanpa ketunaan dan kesulitan belajar atau berpencapaian tinggi)</span></p>
+
+    <h2 class="MsoListParagraph" style='text-align:justify;text-indent:-18.0pt;
+line-height:150%' id="sigil_toc_id_6"><b><span style='font-size:12.0pt;line-height:150%;'>7.</span></b><b><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Materi Ajar</span></b></h2>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>a.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Komunikasi data</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>b.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Standar komunikasi data</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>c.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Protokol TCP/IP</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>d.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Protokol OSI Layer</span></p>
+
+    <span style='font-size:12.0pt;line-height:150%;'><br clear="all" style='page-break-before:always'/> </span> 
+
+    <h2 class="MsoListParagraph" style='text-align:justify;text-indent:-18.0pt;
+line-height:150%' id="sigil_toc_id_7"><b><span style='font-size:12.0pt;line-height:150%;'>8.</span></b><b><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Langkah - Langkah Kegiatan Pembelajaran</span></b></h2>
+
+    <p class="MsoListParagraph" style='text-align:justify;line-height:150%'><b><span style='font-size:12.0pt;line-height:150%;'>Pertemuan 1</span></b></p>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style='margin-left:36.0pt;border-collapse:collapse'>
+      <tbody>
+        <tr>
+          <td width="106" valign="top" style='width:200pt;border:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><b><span lang="EN-US" style='font-size:12.0pt;line-height:150%;
+  '>Pembuka</span></b></p>
+
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><b><span lang="EN-US" style='font-size:12.0pt;line-height:150%;
+  '>Kegiatan Awal </span></b></p>
+
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><b><span lang="EN-US" style='font-size:12.0pt;line-height:150%;
+  '>Pendahuluan</span></b></p>
+          </td>
+
+          <td width="277" valign="top" style='width:500pt;border:solid black 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+
+  <ol>
+    <li class="MsoListParagraph">Mengucapkan salam dan meminta peserta didik untuk berdoa</li>
+    <li class="MsoListParagraph">Memastikan kehadiran peserta didik</li>
+    <li class="MsoListParagraph">Memberi motivasi belajar kepada peserta didik</li>
+    <li class="MsoListParagraph">Menyampaikan materi dan tujuan pembelajaran yang akan dipelajari, kriteria penapaian tujuan pemebelajaran dan asesmen yang akan dilakukan</li>
+  </ol>
+          </td>
+
+          <td width="170" valign="top" style='width:127.25pt;border:solid black 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoNormal" align="center" style='margin-bottom:0cm;text-align:center;
+  line-height:150%'><span lang="EN-US" style='font-size:12.0pt;line-height:150%;
+  '>25 menit</span></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="106" valign="top" style='width:79.7pt;border:solid black 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><b><span lang="EN-US" style='font-size:12.0pt;line-height:150%;
+  '>Inti</span></b></p>
+          </td>
+
+          <td width="277" valign="top" style='width:207.85pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <ol>
+    <li class="MsoListParagraph">Orientasi peserta didik pada masalah
+        <ol type="a">
+            <li>Guru menyampaikan masalah yang akan dipecahkan secara kelompok</li>
+            <li>Peserta didik menemukan sendiri masalah yang akan diangkat dan dikembangkan</li>
+        </ol>
+
+    </li>
+    <li class="MsoListParagraph">Menorganisasikan peserta didik
+        <ol type="a">
+            <li>Peserta didik melalui koordinasi guru membagi kelompok untuk menyelesaikan masalah</li>
+            <li>Guru memastikan setiap anggota memahami tugas masing-masing.</li>
+        </ol>
+    </li>
+    <li class="MsoListParagraph">Membimbing Penyelidikan Kelompok
+        <ol type="a">
+            <li>Peserta didik melakukan penyelidikan untuk didiskusikan dalam menyelesaikan tugas.</li>
+            <li>Guru memantau keterlibatan peserta didik dalam pengumpulan data/bahan selama proses penyelidikan</li>
+        </ol>
+    </li>
+    <li class="MsoListParagraph">Mengembangkan dan Menyajikan Hasil Karya
+        <ol type="a">
+            <li>Kelompok melakukan diskusi untuk menghasilkan solusi pemecahan masalah dan hasilnya dipresentasikan</li>
+            <li>Guru memantau diskusi dan membimbing pembuatan laporan sehingga karya setiap kelompok siap untuk di presentasikan</li>
+        </ol>
+    </li>
+    <li class="MsoListParagraph">Menganalisis dan Mengevaluasi Proses Pembelajaran
+        <ol type="a">
+            <li>Setiap kelompok melakukan presentasi yang sudah dikerjakan secara kelompok, kelompok lain memberikan apresiasi.</li>
+            <li>Guru membimbing presentasi, serta memberikan penghargaan dan masukan kepada kelompok lain tentang layout yang dihasilkan guru</li>
+            <li>Guru bersama peserta didik menyimpulkan materi</li>
+        </ol>
+    </li>
+  </ol>
+          </td>
+
+          <td width="170" valign="top" style='width:127.25pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoNormal" align="center" style='margin-bottom:0cm;text-align:center;
+  line-height:150%'><span lang="EN-US" style='font-size:12.0pt;line-height:150%;
+  '>290 menit</span></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="106" valign="top" style='width:79.7pt;border:solid black 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><b><span lang="EN-US" style='font-size:12.0pt;line-height:150%;
+  '>Penutup</span></b></p>
+          </td>
+
+          <td width="277" valign="top" style='width:207.85pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+
+  <ol>
+    <li class="MsoListParagraph">Peserta didik secara bergantian mendeskripsikan pengalaman belajar hari ini baik tentang metode, materi yang dipelajari</li>
+    <li class="MsoListParagraph">Peserta didik menerima apresiasi dan motivasi dari guru</li>
+    <li class="MsoListParagraph">Doa Penutup</li>
+  </ol>
+          </td>
+
+          <td width="170" valign="top" style='width:127.25pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><span lang="EN-US" style='font-size:12.0pt;line-height:150%;
+  '>45 menit</span></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="MsoListParagraph" style='text-align:justify;line-height:150%'><b><span style='font-size:12.0pt;line-height:150%;;
+color:white'>&#160;</span></b></p>
+
+    <h2 class="MsoListParagraph" style='text-align:justify;text-indent:-18.0pt;
+line-height:150%' id="sigil_toc_id_8"><b><span style='font-size:12.0pt;line-height:150%;'>9.</span></b><b><span style='font-size:7.0pt;
+line-height:150%;'>&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Refleksi Untuk Siswa</span></b></h2>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style='margin-left:13.95pt;border-collapse:collapse'>
+      <tbody>
+        <tr>
+          <td width="582" colspan="3" valign="top" style='width:436.85pt;border:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><b><span lang="EN-US" style='font-size:12.0pt;line-height:150%;
+  '>Nama Peserta Didik :</span></b></p>
+
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><b><span lang="EN-US" style='font-size:12.0pt;line-height:150%;
+  '>Kelas&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; :</span></b></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="38" valign="top" style='width:1.0cm;border:solid black 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><b><span lang="EN-US" style='font-size:12.0pt;line-height:
+  150%;'>No</span></b></p>
+          </td>
+
+          <td width="321" valign="top" style='width:240.95pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><b><span lang="EN-US" style='font-size:12.0pt;line-height:
+  150%;'>Pertanyaan Refleksi</span></b></p>
+          </td>
+
+          <td width="223" valign="top" style='width:167.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><b><span lang="EN-US" style='font-size:12.0pt;line-height:
+  150%;'>Jawaban</span></b></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="38" valign="top" style='width:1.0cm;border:solid black 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><span lang="EN-US" style='font-size:12.0pt;line-height:150%;'>1.</span></p>
+          </td>
+
+          <td width="321" valign="top" style='width:240.95pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;'>Bagian manakah yang menurutmu paling sulit dari pelajaran ini?</span></p>
+          </td>
+
+          <td width="223" valign="top" style='width:167.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;'>&#160;</span></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="38" valign="top" style='width:1.0cm;border:solid black 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><span lang="EN-US" style='font-size:12.0pt;line-height:150%;'>2.</span></p>
+          </td>
+
+          <td width="321" valign="top" style='width:240.95pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><span lang="EN-US" style='font-size:12.0pt;line-height:150%;'>A</span><span lang="IN" style='font-size:12.0pt;
+  line-height:150%;'>pa yang akan kamu lakukan untuk memperbaiki hasil belajarmu?</span></p>
+          </td>
+
+          <td width="223" valign="top" style='width:167.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;'>&#160;</span></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="38" valign="top" style='width:1.0cm;border:solid black 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><span lang="EN-US" style='font-size:12.0pt;line-height:150%;'>3.</span></p>
+          </td>
+
+          <td width="321" valign="top" style='width:240.95pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><span lang="EN-US" style='font-size:12.0pt;line-height:150%;'>Jika kamu diminta untuk memberikan bintang 1 sampai 5, berapa bintang akan kamu berikan pada usaha yang telah kamu lakukan?</span></p>
+          </td>
+
+          <td width="223" valign="top" style='width:167.55pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin:0cm;text-align:justify;line-height:
+  150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;'>&#160;</span></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="MsoListParagraph" style='text-align:justify;text-indent:-18.0pt;
+line-height:150%' id="sigil_toc_id_9"><b><span style='font-size:12.0pt;line-height:150%;;color:white'>1</span></b><b><span style='font-size:
+12.0pt;line-height:150%;'>10.</span></b><b><span style='font-size:7.0pt;line-height:150%;'>&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Pengayaan dan Remedial</span></b></h2>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>a.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Remedial </span></p>
+
+    <p class="MsoListParagraph" style='margin-left:72.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>1)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Modifikasi tugas sesuai penguasaan kompetensi siswa</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:72.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>2)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Tutor sebaya</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:72.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>3)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Melakukan projek sesuai penguasaan kompetensi siswa</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:54.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>b.</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Pengayaan</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:72.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>1)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Tutor sebaya</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:72.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>2)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Melakukan Projek</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:72.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>3)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Mengembangkan latihan</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:72.0pt;text-align:justify;
+text-indent:-18.0pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>4)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Memberikan permainan, masalah, atau kompetensi antarsiswa</span></p>
+
+    <p class="MsoListParagraph" style='text-align:justify;line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;</span></p>
+
+    <p class="MsoNormal" style='text-align:justify;line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;</span></p>
+
+    <h1 class="MsoNormal" style='text-align:justify;line-height:150%' id="sigil_toc_id_10"><b><span style='font-size:20.0pt;'>URAIAN MATERI</span></b></h1>
+
+
+
+    <h2 style='margin-top:4.95pt;margin-right:46.0pt;margin-bottom:0cm;margin-left:
+36.0pt;text-indent:-18.0pt;line-height:150%;text-autospace:none' id="sigil_toc_id_11"><span lang="IN" style='font-size:12.0pt;line-height:150%;'>A.</span><span lang="IN" style='font-size:7.0pt;line-height:150%'>&#160;&#160;&#160;&#160; </span><span lang="IN" style='font-size:12.0pt;line-height:150%;'>Komunikasi Data</span></h2>
+
+    <h3 class="MsoListParagraph" style='margin-top:4.9pt;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:36.0pt;line-height:115%' id="sigil_toc_id_12"><b><span style='font-size:12.0pt;
+line-height:115%;'>1.</span></b><b><span style='font-size:7.0pt;line-height:115%;'> </span></b><b><span style='font-size:12.0pt;line-height:115%;'>Definisi Komunikasi Data</span></b></h3>
+
+    <p class="MsoListParagraph" style='margin-left:14.2pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Sistem komunikasi data memiliki fungsi dalam memberikan informasi kepada orang yang tepat dengan tepat waktu, memberikan informasi / data terbaru (<i>up-todate</i>). Jadi komunikasi data adalah suatu system yang dipergunakan <span style='letter-spacing:-.05pt'>oleh </span>seseorang / lembaga / alat dalam memberikan suatu pesan kepada orang / lembaga / alat, dengan harapan orang dalam suatu lembaga yang menerima pesan (user) tersebut melalui suatu peralatan mengerti/memahami isi pesan<span style='letter-spacing:-.05pt'> </span>tersebut.</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:14.2pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Sedangkan data didefinisikan sebagai suatu fakta (keterangan) di masa yang lalu dari suatu kejadian (action), benda dan lain-lain yang dapat berbentuk suara (Audio), gambar (Video) atau karakter (Digital). Selain pengertian komunikasi dan data, perlu juga diuraikan definisi infromasi dimana informasi sebagai suatu hasil pengolahan data yang dapat dipergunakan untuk suatu kegiatan (action) saat ini, atau di masa yang akan datang. Informasi ini sudah membentuk suatu struktur data yang dapat memberi suatu keterangan yang lengkap dari data tersebut, sehingga apabila ada data yang hilang maka informasi akan menjadi salah.</span></p>
+
+    <p class="MsoNormal" style='text-align:justify;line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;&#160;&#160;&#160; Model Komunikasi Data :</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:50.2pt;text-align:justify;text-indent:-18.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;'>a.</span><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Model Komunikasi Data Simplex ( Satu Arah )</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:50.2pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>Pengirim dan penerima tidak dapat menjalin komunikasi. Contohnya : televisi dan radio</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:50.2pt;text-align:justify;
+line-height:150%'><span style=''><img width="472" height="120" id="image17.png" src="../Images/image001.jpg"/></span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:50.2pt;text-align:justify;text-indent:-18.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;'>b.</span><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Model data Half Duplex ( Dua arah bergantian )</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:50.2pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>Pengirim dan penerima dapat saling berbagi informasi tetapi tidak dalam waktu bersamaan. Contohnya : <i>talkywalky</i></span></p>
+
+    <p class="MsoListParagraph" style='text-align:justify;line-height:150%;margin-left:50.2pt'><span style=''><img width="462" height="120" id="image18.png" src="../Images/image002.jpg"/></span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:50.2pt;text-align:justify;text-indent:-18.0pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;'>c.</span><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Komunikasi data Full Duplex ( Dua arah bisa bersamaan )</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:50.2pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>Pengirim dan penerima informasi dapat menjalin komunikasi. Contohnya: Telepon, saat mengobrol dengan teman.</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:50.2pt;text-align:justify;
+line-height:150%'><span style=''><img width="458" height="124" id="image19.png" src="../Images/image003.jpg"/></span></p>
+
+    <h3 class="MsoNormal" style='text-align:justify;line-height:150%' id="sigil_toc_id_13"><span style='font-size:12.0pt;line-height:150%;'>&#160;<b>2.</b></span><b><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Komponen Komunikasi Data</span></b></h3>
+
+    <p class="MsoListParagraph" style='margin-left:1.0cm;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Hasil akhir yang diharapkan dari proses komunikasi adalah&#160; adanya tindakan ataupun perubahan sikap penerima sesuai dengan keinginan pengirim. Oleh sebab itu, dalam sebuah proses komunikasi, seorang komunikator harus mengusahakan agar pesan - pesannya dapat diterima sesuai kehendak pengirim. Berikut ini beberapa komponen komunikasi data:</span></p>
+
+    <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style='margin-left:33.75pt;border-collapse:collapse'>
+      <tbody>
+        <tr>
+          <td width="47" style='width:35.45pt;border:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><b><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>No</span></b></p>
+          </td>
+
+          <td width="123" style='width:92.15pt;border:solid black 1.0pt;border-left:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><b><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>Komponen</span></b></p>
+          </td>
+
+          <td width="328" style='width:246.3pt;border:solid black 1.0pt;border-left:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><b><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>Keterangan</span></b></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="47" style='width:35.45pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>1.</span></p>
+          </td>
+
+          <td width="123" style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>Penerima</span></p>
+          </td>
+
+          <td width="328" style='width:246.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoBodyText" style='margin-top:9.95pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:1.7pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  150%'><span lang="IN" style=''>P</span><span lang="EN-US" style=''>iranti yang menerima data, </span><span lang="IN" style=''>misalnya</span><span lang="EN-US" style=''> komputer, handphone, video kamera, dan lainnya yang<span style='letter-spacing:.05pt'> </span>sejenis.</span></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="47" style='width:35.45pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>2.</span></p>
+          </td>
+
+          <td width="123" style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>Pengirim</span></p>
+          </td>
+
+          <td width="328" style='width:246.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+  10.0pt;margin-left:1.7pt;text-align:justify;line-height:115%'><span lang="IN" style='font-size:12.0pt;line-height:115%;'>Piranti yang menerima data, misalnya komputer, handphone, video kamera, dan lainnya yang<span style='letter-spacing:.05pt'> </span>sejenis.</span></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="47" style='width:35.45pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>3.</span></p>
+          </td>
+
+          <td width="123" style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>Pesan</span></p>
+          </td>
+
+          <td width="328" style='width:246.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoBodyText" style='margin-top:10.05pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:1.7pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  150%'><span lang="IN" style=''>I</span><span lang="EN-US" style=''>nformasi yang akan dipindahkan bisa berupa apa saja,</span><span lang="IN" style=''> misalnya</span><span lang="EN-US" style=''> teks, angka, gambar, suara, video, atau kombinasi dari semuanya.</span></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="47" style='width:35.45pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>4.</span></p>
+          </td>
+
+          <td width="123" style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>Protokol</span></p>
+          </td>
+
+          <td width="328" style='width:246.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoBodyText" style='margin-top:10.05pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:1.7pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  150%'><span lang="IN" style=''>A</span><span lang="EN-US" style=''>turan - aturan yang harus disepakati oleh dua atau lebih alat untuk dapat saling berkomunikasi. Tanpa protocol, dua alat atau lebih mungkin saja bisa saling terhubung tetapi tidak dapat saling berkomunikasi, sehingga <i>message</i> yang dikirim tidak dapat diterima oleh alat yang dituju.</span></p>
+
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>&#160;</span></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="47" style='width:35.45pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>5.</span></p>
+          </td>
+
+          <td width="123" style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>Media Pengiriman</span></p>
+          </td>
+
+          <td width="328" style='width:246.3pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 5.4pt 0cm 5.4pt'>
+            <p class="MsoBodyText" style='margin-top:10.05pt;margin-right:0cm;margin-bottom:
+  0cm;margin-left:1.7pt;margin-bottom:.0001pt;text-align:justify;line-height:
+  150%'><span lang="IN" style=''>M</span><span lang="EN-US" style=''>edia atau saluran yang digunakan untuk mengirimkan&#160; data, bias berupa kabel, cahaya maupun gelombang<span style='letter-spacing:-.15pt'> </span>magnetik.</span></p>
+
+            <p class="MsoListParagraph" align="center" style='margin:0cm;text-align:center;
+  line-height:150%'><span lang="IN" style='font-size:12.0pt;line-height:150%;
+  '>&#160;</span></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="MsoListParagraph" style='margin-left:1.0cm;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;;color:white'>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span></p>
+
+    <h3 class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:1.0cm;text-align:justify;text-indent:7.65pt;line-height:
+150%' id="sigil_toc_id_14"><b><span style='font-size:12.0pt;line-height:150%;'>3.</span></b><b><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Media Pengiriman Data</span></b></h3>
+
+    <p class="MsoBodyText" style='margin-top:.5pt;line-height:150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Jenis - jenis media pengiriman data dikategorikan sebagai berikut :</span></p>
+
+    <p class="MsoBodyText" style='margin-top:.5pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:36.0pt;margin-bottom:.0001pt;line-height:150%'><b><span lang="IN" style=''>1)</span></b><b><span lang="IN" style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span></b><b><span lang="EN-US" style=''>Media yang<span style='letter-spacing:.05pt'> </span></span></b><b><span lang="IN" style=''>T</span></b><b><span lang="EN-US" style=''>erpandu</span></b></p>
+
+    <p class="MsoBodyText" style='margin-top:.5pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:42.55pt;margin-bottom:.0001pt;text-indent:-6.55pt;line-height:
+150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Berikut ini beberapa komponen yang masuk ke dalam kategori&#160; media yang terpadu:</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:6.3pt;margin-right:7.0pt;
+margin-bottom:0cm;margin-left:2.0cm;text-align:justify;text-indent:-14.15pt;
+line-height:150%;text-autospace:none'><span style='font-size:12.0pt;line-height:
+150%;'>a)</span><span style='font-size:
+7.0pt;line-height:150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Kabel <i>Twisted Pair</i> (kabel berpasangan) ada yang pasangan tunggal dan banyak<span style='letter-spacing:-.05pt'> </span>pasangan.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:6.3pt;margin-right:-.05pt;
+margin-bottom:0cm;margin-left:2.0cm;text-align:justify;text-indent:-14.15pt;
+line-height:150%;text-autospace:none'><span style='font-size:12.0pt;line-height:
+150%;'>b)</span><span style='font-size:
+7.0pt;line-height:150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Kabel <i>Coaxial</i> kabel yang terdiri dari 2 konduktor: 1 konduktoor didalam, 1 konduktor diluar melingkupi yang di dalam. Kedua dipisahkan oleh isolator, dan terbungkus karet<span style='letter-spacing:-.3pt'> </span>pembungkus.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:6.3pt;margin-right:-.05pt;
+margin-bottom:0cm;margin-left:2.0cm;text-align:justify;text-indent:-14.15pt;
+line-height:150%;text-autospace:none'><span style='font-size:12.0pt;line-height:
+150%;'>c)</span><span style='font-size:
+7.0pt;line-height:150%;'>&#160;&#160;&#160; </span><i><span style='font-size:12.0pt;line-height:150%;'>Optical Fiber</span></i><span style='font-size:12.0pt;line-height:150%;'> terbuat dari kaca kabel yang terbuat dari kaca yang menyalurkan cahaya sebagai pembawa<span style='letter-spacing:-.25pt'> </span>sinyal.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:42.55pt;text-indent:-6.55pt;line-height:150%;text-autospace:
+none'><b><span style='font-size:12.0pt;line-height:150%;'>2)</span></b><b><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Media yang tidak<span style='letter-spacing:.05pt'> </span>terpandu</span></b></p>
+
+    <p class="MsoListParagraph" style='margin-left:42.55pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Wireless sebagai media pengiriman data menggunakan medium udara yang berfugsi sebagai media penyaluran sinyal elektromagnetik. Beberapa bentuk dari media yang tidak terpadu diajabarkan sebagai berikut :</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:2.0cm;text-align:justify;text-indent:-14.15pt;line-height:150%;
+text-autospace:none'><span style='font-size:12.0pt;line-height:150%;'>a)</span><span style='font-size:7.0pt;line-height:
+150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>WPAN ( <i>Wireless Personal Area Network</i> )</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:2.0cm;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160; Media - media yang di gunakan WPAN antara lain : <i>Infra Red </i>(IR) dan <i>Bluetooth</i>. WPAN identik dengan bentuk komunikasi wireless terbatas pada jarak pendek dan umumnya hanya terbatas untuk dua buah perangkat elektronik.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:2.0cm;text-align:justify;text-indent:-14.15pt;line-height:150%;
+text-autospace:none'><span style='font-size:12.0pt;line-height:150%;'>b)</span><span style='font-size:7.0pt;line-height:
+150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>WLAN ( <i>Wireless Local Area Network</i> )</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:2.0cm;text-align:justify;
+text-indent:21.3pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>WLAN memiliki standar komunikasi data yang digunakan dalan WLAN umumnya adalah keluarga <i>Institute of Electrical and Electronics Engineers</i> (IEEE) 802.11. WLAN adalah sebuah bentuk komunikasi nirkabel yang memiliki area terbatas seperti dalam suatu ruangan ataupun sebuah gedung.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:2.0cm;text-align:justify;text-indent:-14.15pt;line-height:150%;
+text-autospace:none'><span style='font-size:12.0pt;line-height:150%;'>c)</span><span style='font-size:7.0pt;line-height:
+150%;'>&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>WMAN ( <i>Wireless MAN</i> )</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:2.0cm;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>WMAN identik dengan jaringan wireless network dengan transfer data berkecepatan tinggi yang menghubungkanbeberapa jaringan WLAN di berbagai lokasi seperti kampus, perkantoran, pemerintahan. MAN termasuk jenis jaringan yang sesuai untuk membangun jaringan antarkantor dalam satu kota antara pabrik / instansi dan kantor pusat yang berada dalam jangkauan.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:2.0cm;text-align:justify;text-indent:-14.15pt;line-height:150%;
+text-autospace:none'><span style='font-size:12.0pt;line-height:150%;'>d)</span><span style='font-size:7.0pt;line-height:
+150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>WWAN ( <i>Wireless Wide Area Network</i> )</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:2.0cm;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>Mencakup suatu daerah yang sangat luas seperti sebuah kota atau negara melalui penggunaan beberapa antena ataupun sistem satelit yang diselenggarakan oleh penyelenggara jasa telekomunikasinya. WWAN meliputi teknologi daerah jangkauan luas seperti&#160; seluler 2G, 3G, 4G, <i>Cellular Digital Packet Data</i> (CDPD), <i>Global System for Mobile Communications</i> (GSM) dan CDMA. </span></p>
+
+    <p class="MsoBodyText" style='margin-left:36.0pt;text-indent:-7.65pt;line-height:
+150%'><b><span lang="EN-US" style=''>3)</span></b><b><span lang="EN-US" style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span></b><b><span lang="EN-US" style=''>Isyarat Analog</span></b></p>
+
+    <p class="MsoBodyText" style='margin-left:42.55pt;text-align:justify;text-indent:
+-6.55pt;line-height:150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Isyarat analog bisa juga disebut isyarat kontinyu, karena bentuknya berupa gelombang yang kontinyu, yang membawa informasi dengan mengubah karakteristik gelombang.</span></p>
+
+    <p class="MsoBodyText" style='margin-left:42.55pt;text-align:justify;text-indent:
+-6.55pt;line-height:150%'><b><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span></b><span lang="EN-US" style=''>Dua parameter/ karakteristik terpenting yang dimiliki oleh isyarat analog, yaitu amplitude dan frekuensi. Jika dikaitkan dengan suara, ketinggian gelombang ditentukan oleh amplitudo, yang menentukan keras tidaknya suara, sedangkan frekuensi menentukan jumlah siklus gelombang dalam satu detik, yang berimplikasi pada kenyaringan suara (melengking atau tidak).</span></p>
+
+    <p class="MsoBodyText" style='margin-left:42.55pt;text-align:justify;text-indent:
+-6.55pt;line-height:150%'><b><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span></b><span lang="EN-US" style=''>Isyarat analog biasa dinyatakan dengn gelombang sinus, mengingat gelombang sinus merupakan dasar untuk semua bentuk isyarat analog. Hal ini didasarkan kenyataan bahwa berdasarkan analisis Fourier, suatu isyarat analog dapat diperoleh dari&#160; perpaduan sejumlah gelombang<span style='letter-spacing:-.1pt'> </span>sinus.</span></p>
+
+    <h2 class="MsoListParagraph" style='margin-top:4.9pt;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:36.0pt;text-indent:-18.0pt;line-height:115%' id="sigil_toc_id_15"><b><span style='font-size:12.0pt;line-height:115%;'>B. </span></b><b><span style='font-size:7.0pt;line-height:115%;'>&#160;&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:115%;'>Komunikasi Audio</span></b></h2>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+21.8pt;line-height:150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160; Audio identik dengan&#160; suatu alat komunikasi yang dapat&#160; di tangkap melalui alat pendengaran. Misalnya telepon, <i>walkytalky</i>, radio dan <i>tape recorder</i>. </span><span lang="EN-US" style=''>Audio dalam sistem komunikasi bercirikan video, sinyal elektrik digunakan untuk membawa unsur bunyi. Istilah ini juga biasa digunakan untuk menerangkan sistem-sistem yang berkaitan dengan proses perekaman dan transmisi yaitu sistem pengambilan / penangkapan suara, sambungan transmisi pembawa bunyi, amplifier dan lainnya.</span></p>
+<br></br>
+    <h3 class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:50.2pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%' id="sigil_toc_id_16"><b><span lang="EN-US" style=''>1</span></b><b><span lang="IN" style=''>.</span></b><b><span lang="IN" style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160; </span></b><b><span lang="IN" style=''>Jenis - Jenis Audio</span></b></h3>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:50.2pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>Audio diklasifikasikan sebagai berikut :</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+13.65pt;line-height:150%'><i><span lang="IN" style=''>1)</span></i><i><span lang="IN" style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span></i><i><span lang="IN" style=''>Audio Streaming</span></i></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:69.8pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>I</span><span lang="EN-US" style=''>stilah yang dipergunakan untuk mendengarkan siaran secara live melalui Internet. Berbeda dengan cara lain, yakni men- download file dan menjalankannya di komputer kita bila download-nya sudah selesai, dengan streaming <span style='letter-spacing:.15pt'>&#160;</span>kita dapat mendengarnya langsung tanpa perlu mendownload file-nya sekaligus. Ada bermacam-macam audio streaming, misalnya Winamp (mp3), RealAudio (ram) dan liquid radio.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+13.65pt;line-height:150%'><i><span lang="IN" style=''>2)</span></i><i><span lang="IN" style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span></i><i><span lang="IN" style=''>Audio Visual</span></i></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="EN-US" style=''>Perangkat <i>sound s</i></span><i><span lang="IN" style=''>y</span></i><i><span lang="EN-US" style=''>stem</span></i><span lang="EN-US" style=''> yang dilengkapi dengan penampilan gambar, biasanya digunakan untuk presentasi, <i>home theater</i>, dan sebagainya.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+13.65pt;line-height:150%'><i><span lang="IN" style=''>3)</span></i><i><span lang="IN" style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span></i><i><span lang="IN" style=''>Audio Oscillator</span></i></p>
+
+    <p class="MsoListParagraph" style='margin-top:.05pt;margin-right:-.05pt;
+margin-bottom:8.0pt;margin-left:70.9pt;text-align:justify;line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>Merupakan produk dari perusahaan Hewlett Packard yang pertama. Produk ini digunakan oleh Walt Disney Studios dalam pembuatan filmnya yang berjudul Fantasia.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+13.65pt;line-height:150%'><i><span lang="IN" style=''>4)</span></i><i><span lang="IN" style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span></i><i><span lang="IN" style=''>Audio response</span></i></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+8.0pt;margin-left:70.9pt;text-align:justify;line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>Suara yang dihasilkan oleh komputer. Output pembicaraan yang dihasilkan komputer untuk menanggapi input jenis khusus, misalnya permintaan nomor<span style='letter-spacing:-.3pt'> </span>telepon.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+13.65pt;line-height:150%'><i><span lang="IN" style=''>5)</span></i><i><span lang="IN" style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span></i><i><span lang="IN" style=''>Audio/Modem Riser </span></i><span lang="IN" style=''>(AMR)</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:70.9pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="EN-US" style=''>Sebuah kartu plug-in untuk motherboard Intel yang memuat sirkuit audio dan atau sirkuit modem. AMR memuat fungsi-fungsi analog (kode-kode) yang dipelukan untuk operasi modem dan atau<span style='letter-spacing:-.3pt'> </span>audio.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:.05pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:62.4pt;margin-bottom:.0001pt;text-indent:-12.75pt;line-height:
+150%'><span lang="EN-US" style=''>Prinsip Komunikasi Audio adalah sebagai berikut:</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:.1pt;margin-bottom:
+0cm;margin-left:3.0cm;text-indent:-21.25pt;line-height:150%;text-autospace:
+none'><span lang="EN-US" style=''>1)</span><span lang="EN-US" style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Kata-kata adalah simbol dari hal-hal nyata tetapi bukan hal-hal itu<span style='letter-spacing:-.3pt'> </span>sendiri.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:98.4pt;text-indent:-34.6pt;line-height:150%;text-autospace:
+none'><span lang="EN-US" style=''>2)</span><span lang="EN-US" style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Arti terletak dalam diri individu bukan dalam<span style='letter-spacing:-.1pt'> </span>kata-kata.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:3.0cm;text-align:justify;text-indent:-21.25pt;line-height:150%;
+text-autospace:none'><span lang="EN-US" style=''>3)</span><span lang="EN-US" style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Semua hal mengalami perubahan, yang tetap adalah perubahan itu sendiri.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:.05pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:98.4pt;text-indent:-34.6pt;line-height:150%;text-autospace:
+none'><span lang="EN-US" style=''>4)</span><span lang="EN-US" style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Hindari orientasi yang bersifat kaku. </span></p>
+<br></br>
+    <h3 class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:50.2pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+-18.0pt;line-height:150%' id="sigil_toc_id_17"><b><span lang="EN-US" style=''>2</span></b><b><span lang="IN" style=''>.</span></b><b><span lang="IN" style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160; </span></b><b><span lang="IN" style=''>Media Komunikasi Audio</span></b></h3>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:50.2pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Media komunikasi audio adalah suatu alat komunikasi yang dapat ditangkap melalui alat pendengaran. Contoh : telepon, radio dan tape recorder.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:98.4pt;text-indent:-48.75pt;line-height:normal;text-autospace:
+none'><span lang="EN-US" style=''>1)</span><span lang="EN-US" style='font-size:7.0pt;'>&#160;&#160;&#160; </span><span style='font-size:12.0pt;'>Telepon</span></p>
+
+    <p class="MsoBodyText" style='margin-top:6.3pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:63.8pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="EN-US" style=''>Telepon, adalah media komunikasi audio yang digunakan dalam komunikasi antar personal yang banyak digunakan dalam lingkup kantor</span></p>
+
+    <p class="MsoBodyText" style='margin-top:6.3pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:63.8pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+-14.15pt;line-height:150%'><span lang="EN-US" style='font-size:11.0pt;line-height:
+150%;'>2)</span><span lang="EN-US" style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160; </span><span lang="EN-US" style=''>Radio</span></p>
+
+    <p class="MsoBodyText" style='margin-top:6.3pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:63.8pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="EN-US" style=''>Sistem Radio (Gelombang Analog Audio) satu arah dengan jarak jauh, pada sistem ini bentuk data berupa suara. berikut contoh dari Attention dari audio radio :</span></p>
+    <br></br>
+    <audio style="margin-left: 50.2pt;" controls="controls" src="../Audio/call-to-attention-123107.mp3">call-to-attention-123107</audio>
+    <br></br>
+    <br></br>
+    <h2 class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:14.2pt;text-indent:-14.2pt;line-height:115%' id="sigil_toc_id_18"><b><span style='font-size:12.0pt;line-height:115%;'>C. </span></b><b><span style='font-size:7.0pt;line-height:115%;'>&#160;</span></b><b><span style='font-size:12.0pt;line-height:115%;'>Komunikasi Video</span></b></h2>
+
+    <p class="MsoListParagraph" style='margin-left:14.2pt;text-align:justify;
+line-height:150%'><b><span style='font-size:12.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span></b><span style='font-size:12.0pt;line-height:150%;'>Komunikasi video identik dengan suatu bentuk komunikasi yang di tangkap melalui alat penglihatan atau visual. Salah satu kelebihan komunikasi video adalah bisa berkomunikasi melihat seseorang&#160; atau melihat kejadian di suatu tempat di zona yang berbeda atau di tempat yang berbeda, tanpa harus berada di zona atau tempat yang bersamaan. Misalnya CCTV (<i>Closed Circuit Television</i>) dan siaran TV.</span></p>
+
+    <h3 class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:50.2pt;text-align:justify;text-indent:-18.0pt;line-height:
+150%' id="sigil_toc_id_19"><b><span style='font-size:12.0pt;line-height:150%;'>1.</span></b><b><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Jenis - Jenis Video</span></b></h3>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;'>1)</span><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span><i><span style='font-size:12.0pt;line-height:150%;'>Videotex</span></i></p>
+
+    <p class="MsoListParagraph" style='margin-left:63.8pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;;color:#333333'>Istilah yang dibuat ITU untuk menjelaskan peralatan TV<span style='letter-spacing:2.7pt'> </span>yang digunakan untuk menampilkan data berbasis komputer, baik dikirimkan lewat telepon atau lewat kanal pemancar.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;'>2)</span><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span><i><span style='font-size:12.0pt;line-height:150%;'>Video IP </span></i></p>
+
+    <p class="MsoListParagraph" style='margin-left:63.8pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>Terdapat tiga kategori video pada saat mereka dipancarkan pada publik melewati satelit, kabel, dan IP (<i>format radio analog</i>). Tipe - tipe dari Video IP diklasifikasikan sebagai berikut :</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:78.0pt;text-align:justify;text-indent:-14.2pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;'>a)</span><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Tipe I</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:78.0pt;text-align:justify;text-indent:-14.2pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;'>b)</span><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Tipe II</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:78.0pt;text-align:justify;text-indent:-14.2pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;'>c)</span><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Tipe III</span></p>
+
+    <h3 class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:50.2pt;text-align:justify;text-indent:-18.0pt;line-height:
+150%' id="sigil_toc_id_20"><b><span style='font-size:12.0pt;line-height:150%;'>2.</span></b><b><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Perangkat Video</span></b></h3>
+
+    <p class="MsoListParagraph" style='margin-left:50.2pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160; Media komunikasi video bisa digunakan dengan koneksi internet, misalnya menggunakan fasilitas <i>video call</i> atau <i>skype</i> untuk menghubungi siapapun untuk berkomunikasi dengan media komunikasi video. Beberapa jenis parangkat video sebagai berikut :</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:6.15pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:105.9pt;text-indent:-56.25pt;line-height:normal;text-autospace:
+none'><span style='font-size:12.0pt;;
+color:#333333'>1)</span><span style='font-size:7.0pt;;
+color:#333333'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;;color:#333333'>Video<span style='letter-spacing:-.05pt'> </span>CODEC</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:6.15pt;margin-right:0cm;margin-bottom:
+8.0pt;margin-left:70.9pt;text-align:justify'><span style='font-size:12.0pt;
+line-height:106%;;color:#333333'>Melakukan fungsi kompresi sinyal video untuk penghematan bandwidth</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:6.15pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:49.65pt;text-align:justify;line-height:normal;text-autospace:
+none'><span style='font-size:12.0pt;;
+color:#333333'>2)</span><span style='font-size:7.0pt;;
+color:#333333'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;;color:#333333'>Video<span style='letter-spacing:-.05pt'> </span>Controller</span></p>
+
+    <p class="MsoBodyText" style='margin-top:6.3pt;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:69.9pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="IN" style='color:#333333'>M</span><span lang="EN-US" style='color:#333333'>elakukan kontrol seleksi (memilih) kamera yang ditayangkan.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:.1pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:105.9pt;text-indent:-56.25pt;line-height:normal;text-autospace:
+none'><span style='font-size:12.0pt;;
+color:#333333'>3)</span><span style='font-size:7.0pt;;
+color:#333333'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;;color:#333333'>Camera dan <span style='letter-spacing:-.15pt'>&#160;</span>monitor</span></p>
+
+    <p class="MsoBodyText" style='margin-top:6.35pt;margin-right:47.95pt;margin-bottom:
+0cm;margin-left:69.9pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="IN" style='color:#333333'>M</span><span lang="EN-US" style='color:#333333'>erupakan perangkat <i>input/output</i> dalam sistem video</span><span lang="IN" style='color:#333333'>.</span></p>
+
+    <p class="MsoListParagraph"><b><span style='font-size:12.0pt;line-height:106%;
+'>&#160;</span></b></p>
+
+    <h2 class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:14.2pt;text-indent:-14.2pt;line-height:115%' id="sigil_toc_id_21"><b><span style='font-size:12.0pt;line-height:115%;'>D.</span></b><b><span style='font-size:7.0pt;line-height:115%;'>&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:115%;'>Komunikasi Audio Video</span></b></h2>
+
+    <p class="MsoListParagraph" style='margin-left:14.2pt;text-align:justify;
+text-indent:21.8pt;line-height:150%'><b><span style='font-size:12.0pt;
+line-height:150%;'>&#160;&#160;&#160;&#160; </span></b><span style='font-size:12.0pt;line-height:150%;'>Komunikasi audio video ( audio visual ) indentik dengan gabungan antara komunikasi audio dan komunikasi video. Komunikasi dapat di tangkap melalui alat pendengaran dan pengihatan atau visual dalam bentuk pengolahan-pengolahan pesan-pesan untuk tujuan sosial atau komersial, dari individu atau kelompok yang ditunjukan kepada individu atau kelompok lainnya. Beberapa jenis komunikasi audio visual di antaranya : Televisi, VCD player, DVD player, <i>Video Call</i>, <i>Video Conference/Teleconference</i>, komputer.</span></p>
+
+    <h3 class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:50.2pt;text-indent:-18.0pt;line-height:115%' id="sigil_toc_id_22"><b><span style='font-size:12.0pt;line-height:115%;'>1.</span></b><b><span style='font-size:7.0pt;line-height:115%;'>&#160;&#160;&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:115%;'>Bentuk Komunikasi Audio Video</span></b></h3>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:63.8pt;text-indent:-14.15pt;line-height:115%'><span style='font-size:12.0pt;line-height:115%;'>1)</span><span style='font-size:7.0pt;line-height:115%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:115%;'>Video</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:63.8pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>Video sebagai media audio visual yang menampilkan gerak, semakin lama semakin populer dalam masyarakat kita. Pesan yang disajikan dapat bersifat fakta (kejadian/ peristiwa penting, berita), maupun fiktif (seperti misalnya cerita), bisa bersifat informatif, edukatif maupun intruksional.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:63.8pt;text-indent:-14.15pt;line-height:115%'><span style='font-size:12.0pt;line-height:115%;'>2)</span><span style='font-size:7.0pt;line-height:115%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:115%;'>Film ( gambar hidup )</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:63.8pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>Film atau gambar hidup merupakan gambar-gambar dalam frame dimana frame demi frame diproyeksikan melalui lensa proyektor secara mekanis sehingga pada layar terlihat gambar itu hidup.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:63.8pt;text-indent:-14.15pt;line-height:115%'><span style='font-size:12.0pt;line-height:115%;'>3)</span><span style='font-size:7.0pt;line-height:115%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:115%;'>Televisi ( TV )</span></p>
+
+    <p class="MsoBodyText" style='margin-left:63.8pt;text-align:justify;line-height:
+150%'><span lang="EN-US" style=''>Televisi adalah sistem elektronik yang mengirimkan gambar diam dan gambar hidup bersama suara melalui kabel dan ruang. Dewasa ini televisi yang dimanfaatkan untuk keperluan pendidikan dengan mudah dapat dijangkau melalui siaran dari udara ke udara dan dapat dihubungkan melalui satelit. Televisi pendidikan adalah penggunaan program video yang direncanakan untuk mencapai tujuan pengajaran tertentu tanpa melihat siapa yang menyiarkannya. Televisi pendidikan tidak hanya menghibur, tetapi lebih penting adalah mendidik.</span></p>
+
+    <h2 class="MsoListParagraph" style='margin-top:4.9pt;margin-right:.05pt;
+margin-bottom:0cm;margin-left:36.0pt;text-align:justify;text-indent:-18.0pt;
+line-height:150%;text-autospace:none' id="sigil_toc_id_23"><b><span style='font-size:12.0pt;
+line-height:150%;'>B.</span></b><b><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>STANDAR KOMUNIKASI</span></b></h2>
+
+    <h3 class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:35.45pt;text-indent:-14.15pt;line-height:150%' id="sigil_toc_id_24"><b><span style='font-size:12.0pt;line-height:150%;'>1.</span></b><b><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Defenisi Standar Komunikasi Data</span></b></h3>
+
+    <p class="MsoListParagraph" style='margin-left:35.45pt;text-align:justify;
+line-height:150%'><b><span style='font-size:12.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span></b><span style='font-size:12.0pt;line-height:150%;'>Jaringan telekomunikasi dirancang untuk melayani beragam pengguna yang menggunakan berbagai macam perangkat yang berasal dari vendor yang berbeda. </span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:33.85pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+18.0pt;line-height:150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Untuk merencanakan dan membangun suatu jaringan secara efektif, diperlukan&#160; suatu standard yang menjamin interoperability, compatibility, dan kinerja yang dipersyaratkan secara<span style='letter-spacing:-.05pt'> </span>ekonomis</span><span lang="IN" style=''>.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:33.85pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+18.0pt;line-height:150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Suatu standard yang terbuka (<i>open standard</i>) diperlukan untuk memungkinkan interkoneksi sistem, perangkat maupun jaringan yang berasal dari vendor maupun operator yang berbeda.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:33.85pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+18.0pt;line-height:150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Standar berfungsi sebagai acuan bagi siapa saja yang akan merancang perangkat keras, perangkat lunak dan protokol komunikasi data. Jika tidak demikian, setiap pabrik akan membuat perangkat sesuai dengan spesifikasi sendiri, akibatnya tidak terjadi inter-operabilitas apabila dihubungkan dengan perangkat komunikasi yang dibuat oleh perusahaan<span style='letter-spacing:-.05pt'> </span>lain.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:33.85pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+18.0pt;line-height:150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Terdapat dua macam model standar yang dipakai secara luas untuk komunikasi data pada saat ini, yaitu model <i>Open System Interconnection</i> (OSI) dan model TCP/IP yang telah menjadi standar <i>defacto</i> Internet. Mari kita urai<span style='letter-spacing:-.25pt'> </span>satu-persatu.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:33.85pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+18.0pt;line-height:150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Standar semacam ini perlu untuk menjaga inter-operabilitas antar peralatan yang dibuat oleh pabrik yang berbeda-beda.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:33.85pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+18.0pt;line-height:150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Yang menetapkan standard resmi suatu negara tertentu dapat dilihat berikut ini:</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:9.95pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:2.0cm;text-align:justify;text-indent:-14.15pt;line-height:normal;
+text-autospace:none'><span style='font-size:12.0pt;'>a.</span><span style='font-size:7.0pt;'>&#160;&#160;&#160; </span><span style='font-size:12.0pt;'>Indonesia&#160;&#160;&#160;&#160;&#160; : Menkominfo</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:9.95pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:2.0cm;text-align:justify;text-indent:-14.15pt;line-height:normal;
+text-autospace:none'><span style='font-size:12.0pt;'>b.</span><span style='font-size:7.0pt;'>&#160;&#160;&#160; </span><span style='font-size:12.0pt;'>Inggris&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; : British Standard Institute (BSI)</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:9.95pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:2.0cm;text-align:justify;text-indent:-14.15pt;line-height:normal;
+text-autospace:none'><span style='font-size:12.0pt;'>c.</span><span style='font-size:7.0pt;'>&#160;&#160;&#160; </span><span style='font-size:12.0pt;'>Jerman&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; : Deutsche Industrie- Normen<span style='letter-spacing:-.15pt'> </span>(DIN)</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:9.95pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:2.0cm;text-align:justify;text-indent:-14.15pt;line-height:normal;
+text-autospace:none'><span style='font-size:12.0pt;'>d.</span><span style='font-size:7.0pt;'>&#160;&#160;&#160; </span><span style='font-size:12.0pt;'>Amerika&#160;&#160;&#160;&#160;&#160;&#160;&#160; : American National Standard Institute<span style='letter-spacing:-.25pt'> </span>(ANSI)</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:35.45pt;line-height:150%'><b><span style='font-size:12.0pt;line-height:150%;'>&#160;</span></b></p>
+
+    <h3 class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:35.45pt;text-indent:-14.15pt;line-height:150%' id="sigil_toc_id_25"><b><span style='font-size:12.0pt;line-height:150%;'>2.</span></b><b><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Standar Organisasi</span></b></h3>
+
+    <p class="MsoListParagraph" style='margin-left:35.45pt;text-align:justify;
+line-height:150%'><b><span style='font-size:12.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span></b><span style='font-size:12.0pt;line-height:150%;'>Di era<b> </b>globalisasi ini dikenal adanya badan - badan atau organisasi yang menangani masalah standarlisasi pada tingkat nasional, regional, dan internasional. Standar suatu komunikasi diperlukan agar terdapat keseragaman sehingga komunikasi memungkinkan untuk dilakukan semestinya. Penggunaan standarlisasi dalam bidang telekomunikasi merupakan hal yang sangat penting. Berikut ini berbagai Badan atau Organisasi yang menangani standarisasi Teknologi Komunikasi Data<span style='letter-spacing:-.2pt'> </span>International.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:49.65pt;text-align:justify;text-indent:-14.2pt;line-height:
+150%'><b><span style='font-size:12.0pt;line-height:150%;'>1)</span></b><b><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Badan Standar Eropa</span></b></p>
+
+    <p class="MsoListParagraph" style='margin-left:49.65pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>Beberapa badan standar Eropa dijabarkan sebagai berikut :</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none'><span style='font-size:12.0pt;line-height:150%;
+'>1)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>ETSI = <span style='letter-spacing:-.05pt'>European</span>Telecommunications Standards Institute &gt; Suatu badan independent yang menetapkan standard untuk komunitas Eropa, Contoh : standard GSM</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none'><span style='font-size:12.0pt;line-height:150%;
+'>2)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>CEN/CENELEC = <span style='letter-spacing:-.05pt'>European </span>Committee for <span style='letter-spacing:-.05pt'>Electrotechnical </span>Standardization / European Committee for Standardization &gt; Badan standardisasi <span style='letter-spacing:-.05pt'>teknologi </span>informasi</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none'><span style='font-size:12.0pt;line-height:150%;
+'>3)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>CEPT = Conférence Européenne des Administrations des Postes et des Telecommunications &gt; Sebelum ada ETSI, melakukan pekerjaan yang dilakukan<span style='letter-spacing:-.2pt'> </span>ETSI</span></p>
+
+    <p class="MsoListParagraph" style='margin-right:0cm;margin-bottom:
+10.0pt;margin-left:49.65pt;text-align:justify;text-indent:-14.2pt;line-height:
+150%'><b><span style='font-size:12.0pt;line-height:150%;'>2)</span></b><b><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Badan Stnadar Amerika</span></b></p>
+
+    <p class="MsoListParagraph" style='margin-left:49.65pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>Beberapa badan Standar Amerika di klasifikasikan sebagai berikut :</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:.05pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none'><span style='font-size:12.0pt;line-height:150%;
+'>1)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>IEEE = Institute of Electrical and Electronics Engineers &gt; Asosiasi engineer elektro internasional, Contoh standard :<span style='letter-spacing:-.2pt'> </span>LAN</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:.05pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none'><span style='font-size:12.0pt;line-height:150%;
+'>2)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>EIA = Electronic Industries Association &gt; Organisasi pabrik perangkat elektronika Amerika, Contoh standar:<span style='letter-spacing:.05pt'> </span>RS232</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none'><span style='font-size:12.0pt;line-height:150%;
+'>3)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>FCC = Federal Communications Commission &gt; Badan regulasi pemerintah<span style='letter-spacing:-.15pt'> </span>Amerika</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:.05pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none'><span style='font-size:12.0pt;line-height:150%;
+'>4)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>TIA = Telecommunications Industry Association &gt; Bertugas mengadaptasi standard dunia ke dalam lingkungan<span style='letter-spacing:-.1pt'> </span>Amerika</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:.05pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none'><span style='font-size:12.0pt;line-height:150%;
+'>5)</span><span style='font-size:7.0pt;
+line-height:150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>ANSI = American Natioal Standards Institute</span></p>
+<br></br>
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:49.65pt;text-align:justify;text-indent:-14.2pt;line-height:
+150%'><b><span style='font-size:12.0pt;line-height:150%;'>c.</span></b><b><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Organisasi Global</span></b></p>
+
+    <p class="MsoListParagraph" style='margin-left:49.65pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>Beberapa badan Standar Organisasi global diklarifikasikan sebagai berikut :</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:71.45pt;text-align:justify;text-indent:-21.8pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;'>1)</span><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>ITU </span></p>
+
+    <p class="MsoListParagraph" style='margin-left:71.45pt;text-align:justify;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>International Telecommunication Union &gt; Badan khusus PBB<span style='letter-spacing:.4pt'> </span>yang bertanggung jawab di dalam bidang telekomunikasi Dibagi ke dalam dua badan standard:</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:3.0cm;text-align:justify;text-indent:-14.15pt;line-height:
+150%'><span style='font-size:12.0pt;line-height:150%;'>a)</span><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>ITU - T ( huruf T berasal dari kata telekomunikasi ) Berasal dari CCITT (Comité <span style='letter-spacing:
+-.05pt'>Consultatif </span>International de Télégraphique et Téléphonique, atau International Telegraph and <span style='letter-spacing:-.05pt'>Telephone </span>Consultative<span style='letter-spacing:-.05pt'> </span>Committee)<b>. </b>Mempublikasikan rekomendasi untuk jaringan <span style='letter-spacing:-.05pt'>telekomunikasi </span>publik.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:.6pt;margin-right:47.9pt;
+margin-bottom:0cm;margin-left:107.45pt;text-align:justify;text-indent:-36.55pt;
+line-height:150%;text-autospace:none'><span style='font-size:12.0pt;line-height:
+150%;'>b)</span><span style='font-size:
+7.0pt;line-height:150%;'>&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>ITU-R (huruf R berasal dari kata radio) Berasal dari CCIR (Comité Consultatif International des Radiocommunications atau International Radio Consultative<span style='letter-spacing:-.05pt'> </span>Committee). </span></p>
+<br></br>
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:47.8pt;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span style='
+letter-spacing:-.05pt'>2)</span><span style='font-size:7.0pt;line-height:150%;
+;letter-spacing:-.05pt'>&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>ISO / IEC : The International Standards</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+8.0pt;margin-left:70.9pt;text-align:justify;line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>Organization / International Electrotechnical<span style='letter-spacing:-.1pt'> </span>Commission</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:.05pt;margin-right:-.05pt;
+margin-bottom:0cm;margin-left:3.0cm;text-align:justify;text-indent:-14.15pt;
+line-height:137%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>1)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:137%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:137%;'>IEC Standar yang meliputi aspek electromechanical (seperti konektor) lingkungan dan keselamatan. </span></p>
+
+    <p class="MsoListParagraph" style='margin-top:.05pt;margin-right:-.05pt;
+margin-bottom:0cm;margin-left:3.0cm;text-align:justify;text-indent:-14.15pt;
+line-height:137%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>2)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:137%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:137%;'>ISO berperan dalam standard dan protokol komunikasi data.</span></p>
+<br></br>
+    <p class="MsoListParagraph" style='margin-top:.05pt;margin-right:47.85pt;
+margin-bottom:0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;
+line-height:137%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>3)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:137%;;letter-spacing:-.05pt'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:137%;'>IETF ( Internet Engineering Task<span style='letter-spacing:.75pt'> </span>Force ) Bertanggung jawab terhadap arsitektur Internet dan mengatur standardisasi protokol TCP/IP untuk Internet.</span></p>
+<br></br>
+    <h3 class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+10.0pt;margin-left:35.45pt;text-indent:-14.15pt;line-height:150%' id="sigil_toc_id_26"><b><span style='font-size:12.0pt;line-height:150%;'>3.</span></b><b><span style='font-size:7.0pt;line-height:150%;'>&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>OSI ( <i>Open System Interconnection</i> )</span></b></h3>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:33.9pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Model Open Systems Interconnection (OSI) diciptakan oleh International Organization for Standardization (ISO) yang menyediakan kerangka logika terstruktur bagaimana proses komunikasi data berinteraksi melalui jaringan. Standard ini dikembangkan untuk industry komputer agar komputer dapat berkomunikasi pada jaringan yang berbeda secara efisien.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:33.9pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Model OSI adalah model atau acuan arsitektural utama untuk network yang mendeskripsikan bagaimana data dan informasi network dikomunikasikan dari sebuah aplikasi </span><span lang="IN" style=''>k</span><span lang="EN-US" style=''>omputer ke aplikasi komputer lain melalui sebuah media transmisi. Model OSI ditetapkan oleh sebuah badan standar internasional yang bernama International Standards Organization (ISO) pada tahun 1947. Standar ISO ini mencakup seluruh aspek komunikasi data dengan model Open System Interconnection. Yang dimaksud dengan open system adalah bahwa seperangkat protokol yang ada di dalam model ini menjamin terjadinya komunikasi sekalipun dua atau lebih sistem yang saling terhubung memiliki arsitektur yang berbeda. Model OSI ini bukan protokol. Juga bukan perangkat lunak atau perangkat keras. OSI adalah sebuah model untuk memahami dan mendesain arsitektur jaringan komunikasi yang fleksibel dan memiliki inter-operabilitas tinggi. “Open” dalam OSI adalah untuk menyatakan model jaringan yang melakukan interkoneksi tanpa memandang perangkat keras/ “hardware” yang digunakan, sepanjang software komunikasi sesuai dengan standard. Hal ini secara tidak langsung menimbulkan “modularity” (dapat dibongkar pasang).</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:35.45pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+26.95pt;line-height:150%'><span lang="IN" style=''>&#160;&#160; </span><span lang="EN-US" style=''>“Modularity” mengacu pada pertukaran protokol di level tertentu tanpa mempengaruhi atau merusak hubungan atau fungsi dari level lainnya. Dalam sebuah layer, protokol saling dipertukarkan, dan memungkinkan komunikasi terus berlangsung. Pertukaran ini berlangsung didasarkan pada perangkat keras “hardware” dari vendor yang berbeda dan bermacam</span><span lang="EN-US" style='font-family:"Trebuchet MS",sans-serif'>‐</span><span lang="EN-US" style=''>macam alasan atau keinginan yang<span style='letter-spacing:.05pt'> </span>berbeda. Model OSI menetapkan 7 lapis proses, yaitu Application layer, Presentation layer, Session layer, Transport layer, Network layer, Data- link layer dan Physical layer. Ketujuh lapis ini berada dalam susunan hirarkis. Karena itu antara lapis satu dengan yang lain tidak boleh dibolak-balik. Seringkali lapis yang terbawah (physical layer) disebut sebagai lapis pertama, sedangkan lapis teratas (application layer) disebut sebagai lapis ketujuh. Setiap layer bertanggungjawwab secara khusus pada proses komunikasi data. Misal, satu layer bertanggungjawab untuk membentuk koneksi antar perangkat, sementara layer lainnya bertanggungjawab untuk mengoreksi terjadinya “error” selama proses transfer data berlangsung.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:35.45pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+26.95pt;line-height:150%'><span lang="EN-US" style=''>Model Layer OSI dibagi dalam dua group: “upper layer” dan “lower layer”. “Upper layer” focus pada applikasi pengguna dan bagaimana file direpresentasikan di komputer. Untuk Network Engineer, bagian utama yang menjadi perhatiannya<span style='letter-spacing:.65pt'> </span>adalah pada “lower layer”. Lower layer adalah intisari komunikasi data melalui jaringan aktual.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:35.45pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+26.95pt;line-height:150%'><span style=''><img width="510" height="345" id="image33.jpeg" src="../Images/image004.jpg"/></span><span lang="IN" style=''>&#160;</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:35.45pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+26.95pt;line-height:150%'><span lang="IN" style=''>&#160;</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:35.45pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+26.95pt;line-height:150%'><span lang="IN" style=''>Layer - layer pada model <i>Open Systems Interconnection</i> (OSI) diklarifikasikan sebagai berikut :</span></p>
+
+    <h4 class="MsoBodyText" style='margin-top:10.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:49.65pt;margin-bottom:.0001pt;text-indent:-14.2pt' id="sigil_toc_id_27"><b><span lang="EN-US" style='letter-spacing:-.05pt'>1)</span></b><b><span lang="EN-US" style='font-size:7.0pt;;
+letter-spacing:-.05pt'>&#160;&#160; </span></b><b><span lang="EN-US" style=''>Application Layer</span></b></h4>
+
+    <p class="MsoBodyText" style='margin-top:.25pt'><span lang="EN-US" style=''>&#160;</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:49.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Lapis ini memungkinkan pengguna melakukan akses terhadap jaringan komunikasi melalui aplikasi antar muka (interface), misalnya: aplikasi mail browser memungkinkan pengguna menulis, membaca, mengambil, mengirim serta mengorganisasi pesan. Contoh aplikasi antar muka yang lain, antara lain: akses file dan direktori secara remote, akses informasi melalui web, akses database dan berbagai layanan jaringan komunikasi yang<span style='letter-spacing:-.35pt'> </span>lain.</span></p>
+
+    <h4 class="MsoBodyText" style='margin-top:10.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:49.65pt;margin-bottom:.0001pt;text-indent:-14.2pt' id="sigil_toc_id_28"><b><span lang="EN-US" style='letter-spacing:-.05pt'>2)</span></b><b><span lang="EN-US" style='font-size:7.0pt;;
+letter-spacing:-.05pt'>&#160;&#160; </span></b><b><span lang="EN-US" style=''>Presentation Layer</span></b></h4>
+
+    <p class="MsoBodyText" style='margin-top:10.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:49.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Lapis ini memiliki fungsi khusus yang berkaitan dengan translasi informasi di antara dua buah sistem, melakukan proses enkripsi untuk data-data yang penting dan melakukan proses kompresi dengan satu tujuan untuk memperkecil jumlah bit yang akan dikirimkan melalui jaringan komunikasi. Proses translasi informasi dibutuhkan karena setiap sistem mungkin memiliki cara yang berbeda untuk mengkodekan (encode) informasi dari karakter atau bilangan menjadi data dalam bentuk bit. Karena itu lapis ini bertugas untuk menjamin adanya inter-operabilitas di antara sistem-sistem yang memiliki metode encoding berbeda.</span></p>
+
+    <h4 class="MsoBodyText" style='margin-top:10.05pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:49.65pt;margin-bottom:.0001pt;text-indent:-14.2pt' id="sigil_toc_id_29"><b><span lang="EN-US" style='letter-spacing:-.05pt'>3)</span></b><b><span lang="EN-US" style='font-size:7.0pt;;
+letter-spacing:-.05pt'>&#160;&#160; </span></b><b><span lang="EN-US" style=''>Session Layer</span></b></h4>
+
+    <p class="MsoBodyText" style='margin-top:10.05pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:49.6pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Lapis ini melakukan kendali terhadap percakapan (dialog control) yang terjadi di antara dua buah sistem. Model dialog yang mungkin dilakukan adalah: simplex, half- duplex dan full-duplex. Tugas kedua dari lapis ini adalah melakukan proses sinkronisasi pengiriman dan penerimaan data agar tidak terjadi kesalahan pembacaan data di sisi penerima.</span></p>
+
+    <h4 class="MsoBodyText" style='margin-left:49.6pt;text-indent:-14.2pt;line-height:
+150%' id="sigil_toc_id_30"><b><span lang="EN-US" style='
+letter-spacing:-.05pt'>4)</span></b><b><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span></b><b><span lang="EN-US" style=''>Transport Layer</span></b></h4>
+
+    <p class="MsoBodyText" style='margin-left:49.6pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Transport layer merupakan lapis yang menangani proses komunikasi dari titik ke titik yang sebenarnya. Bandingkan dengan tiga lapis teratas (application, presentation, session) yang hanya menangani proses pemformatan data, pengaturan data dan pengaturan persiapan komunikasi.</span></p>
+
+    <p class="MsoBodyText" style='margin-left:49.6pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Pesan (message) yang diterima oleh tran</span><span lang="IN" style=''>s</span><span lang="EN-US" style=''>port layer akan dipecah-pecah ke dalam segmen- segmen kecil dengan ukuran sesuai dengan yang disyaratkan oleh protokol. Proses dikenal dengan istilah segmentation. Lalu data dalam bentuk segmen-segmen itulah dikirimkan. Tentunya di sisi penerima akan ada proses sebaliknya&#160; untuk menggabungkan kembali rangkaian segmen tersebut. Proses penggabungan ini dikenal sebagai reassembly. Dengan adanya error control dan flow control pada lapis ini,&#160; tranport layer menjamin bahwa setiap segmen dari pesan akan tiba di tempat tujuan dengan benar dan berurutan. Error control mendeteksi adanya kesalahan dan melakukan aksi untuk memperbaiki kesalahan tersebut, sedangkan flow control menjamin sinkronisasi pengiriman segmen antara sisi pengirim dan penerima, agar tidak terjadi penumpukan data di sisi<span style='letter-spacing:-.35pt'> </span>penerima.</span></p>
+
+    <h4 class="MsoBodyText" style='margin-top:10.1pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:49.65pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+-14.2pt' id="sigil_toc_id_31"><b><span lang="EN-US" style='
+letter-spacing:-.05pt'>5)</span></b><b><span lang="EN-US" style='font-size:7.0pt;
+;letter-spacing:-.05pt'>&#160;&#160; </span></b><b><span lang="EN-US" style=''>Network Layer</span></b></h4>
+
+    <p class="MsoBodyText" style='margin-top:10.1pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:49.65pt;margin-bottom:.0001pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Network layer bertanggung jawab untuk pengiriman paket data dari alamat sumber ke alamat tujuan. Termasuk di dalamnya adalah mengatur rute perjalanan masing-masing paket melintasi jaringan komunikasi. Proses ini dikenal dengan nama routing. Berbeda dengan transport layer yang melihat pesan sebagai satu kesatuan utuh, network layer memperlakukan setiap paket secara terpisah. Karena setiap paket telah dilengkapi dengan alamat sumber dan alamat tujuan, maka network layer menjamin agar masing-masing paket sampai di tempat tujuan dengan benar.</span></p>
+
+    <h4 class="MsoBodyText" style='margin-top:10.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:49.65pt;margin-bottom:.0001pt;text-indent:-14.2pt;line-height:
+150%' id="sigil_toc_id_32"><b><span lang="EN-US" style='
+letter-spacing:-.05pt'>6)</span></b><b><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span></b><b><span lang="EN-US" style=''>Data-link Layer</span></b></h4>
+
+    <p class="MsoBodyText" style='margin-left:49.65pt;text-align:justify;text-indent:
+12.75pt;line-height:150%'><span lang="IN" style=''>&#160;&#160; </span><span lang="EN-US" style=''>Di dalam proses komunikasi data sangat mungkin sekali terdapat berbagai macam peralatan yang membentuk sebuah jaringan komunikasi di antara titik sumber dan titik tujuan. Titik-titik lain yang berada di tengah- tengah di atanra titik sumber dan titik tujuan ini kita sebut dengan istilah intermediate node. Tugas utama dari datalink layer adalah menghantarkan data dalam bentuk frame- frame kecil dari titik sumber ke intermediate node, atau dari intermediate node ke intermediate node, atau dari intermediate node ke titik tujuan. Dengan kata lain data- link layer hanya bertanggung jawab untuk menghantar frame dalam satu hop saja. Hop satu dengan hop yang lain dimungkinkan memiliki protokol yang berbeda. Dalam proses pengiriman data dari hop ke hop, data link juga akan melakukan error control, flow control dan access control. Tugas dari error control dan flow control pada data-link layer mirip dengan tugas error control dan flow control pada transport layer. Perbedaan<span style='letter-spacing:
+.1pt'> </span>di antara keduanya jelas. Transport layer menangani pengiriman dari titik sumber ke tujuan, sedangkan data-link menangani pengiriman dari hop ke hop. Sedangkan access-control menjamin agar media komunikasi dapat digunakan bersama-sama oleh beberapa terminal yang terhubung dalam sebuah jaringan<span style='letter-spacing:-.35pt'> </span>komunikasi.</span></p>
+
+    <h4 class="MsoBodyText" style='margin-top:10.05pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:49.65pt;margin-bottom:.0001pt;text-indent:-14.2pt' id="sigil_toc_id_33"><b><span lang="EN-US" style='letter-spacing:-.05pt'>7)</span></b><b><span lang="EN-US" style='font-size:7.0pt;;
+letter-spacing:-.05pt'>&#160;&#160; </span></b><b><span lang="EN-US" style=''>Physical Layer</span></b></h4>
+
+    <p class="MsoBodyText" style='margin-top:.15pt'><span lang="EN-US" style=''>&#160;</span></p>
+
+    <p class="MsoBodyText" style='margin-left:49.65pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Lapis ini bertanggung jawab untuk membawa bit-bit data melalui media tranmisi. Karena itu physical layer bertanggung jawab menentukan spesifikasi perangkat keras, seperti: representasi bit dalam bentuk tegangan listrik, antar-muka (interface) perangkat komunikasi, jenis dan karakteristik media transmisi, topologi jaringan komunikasi, konfigurasi jaringan komunikasi, spesifikasi peralatan dengan kelajuan pengiriman data (data rate) tertentu, dan hal- hal lain yang terkait media komunikasi secara fisik.</span></p>
+
+    <p class="MsoBodyText" style='margin-left:49.65pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>&#160;</span></p>
+
+    <p class="MsoBodyText" style='margin-left:49.65pt;text-align:justify;line-height:
+150%'><span style=''><img width="474" height="281" id="image37.jpeg" src="../Images/image005.jpg"/></span></p>
+
+    <p class="MsoBodyText" style='margin-left:49.65pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>&#160;</span></p>
+
+    <p class="MsoBodyText" style='margin-left:49.65pt;text-align:justify;line-height:
+150%'><span lang="IN" style=''>&#160;&#160;&#160;&#160;&#160;&#160; </span><span lang="EN-US" style=''>Tujuan utama penggunaan model OSI adalah untuk membantu desainer jaringan memahami fungsi dari tiap</span><span lang="EN-US" style='font-family:"Trebuchet MS",sans-serif'>‐</span><span lang="EN-US" style=''>tiap layer yang berhubungan dengan aliran komunikasi data. Termasuk jenis-jenis protoklol jaringan dan metode<span style='letter-spacing:-.15pt'> </span>transmisi.</span></p>
+
+    <p class="MsoBodyText" style='margin-left:49.65pt;text-align:justify;line-height:
+150%'><span lang="EN-US" style=''>Cara kerja ISO layer:</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>1)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Pertama router mengirim frame melalui jaringnan yang berbeda dengan protokol data link yang berbeda, hanya data link layar dan lapisan fisik yang memerlukan modifikasi.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>2)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Router menghapus semua informasi data link dan mengirimkannya ke lapisan<span style='letter-spacing:-.05pt'> </span>jaringan.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>3)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Router menggunakan alamat tujuan IP untuk menentukan di mana untuk mengirim pada<span style='letter-spacing:-.1pt'> </span>berikutnya</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>4)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Router yang menggunakan data dengan informasi data link populer untuk wan<span style='letter-spacing:.1pt'> </span>atm</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>5)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>ATM WAN menuju ke ethernen<span style='letter-spacing:-.5pt'> </span>LAN</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>6)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Kehilangan paket karena router adalah transportasi lapisan padat mengirimkan menunggu pengakuan penerima lapisan transport terbatas dan mentransmisikan kembali<span style='letter-spacing:-.3pt'> </span>data.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>7)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Rrouter untuk menghapus informasi dan mengirim link ke lapisan jaringan paket</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>8)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Lagi router adalah alamat IP dari lapisan jaringan untuk. menentukan di mana untuk mengirim paket berikutnya.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>9)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160;&#160;&#160;&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Setelah menentukan tahap berikutya dan menambahkan informasi data link yang tepat untuk mengirimkan pada jaringan ( pada jaringan ethernet<span style='letter-spacing:
+-.45pt'> </span>lagi)</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>10)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Beberapa protokol data link layer menyediakan komunikasi yang handal antara dua node. dalam contoh ini lapisan data link ethernet di lakukan ketika lapisan pengirim tidak menerima nya pengakuan dari lapisan menerimanya dan mengirim ulang frame.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>11)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Setiap lapisan model sekarang menghilangkan lapisan enkapsulasi dan membaca informasi tentang cara menambahkan lapisan yang sama pada<span style='letter-spacing:
+-.05pt'> </span>pengirim</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>12)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Membaca bit dari media fisik, dan menguahnya menjadi frame dan mengirimkan frmae ke data<span style='letter-spacing:-.6pt'> </span>link.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>13)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Menghapus header data data link frame dan di konfesi kembali ke paket IP</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>14)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Menghapus header IP mengubah paket kembali ke segmen dan menekan kembali ke lapisan<span style='letter-spacing:-.4pt'> </span>transport.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>15)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Menyerupai segment kembali ke data asli mengunakan nomer port untuk menentukanaplikasi untuk mengirim data ke<span style='letter-spacing:-.2pt'> </span>email.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>16)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Menggunakan informasi sesi untuk menentukan aliran komunikasi data<span style='letter-spacing:
+-.35pt'> </span>ini</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>17)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Menggunakan informasi yang di berikan oleh lpisan presentasi<span style='letter-spacing:
+.2pt'> </span>untuk dapat menginter pretasikan data untuk mesin tertentu.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>18)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Aplikasi membaca perintah SMTP bahwa lapisan aplikasi pada pengirim telah di<span style='letter-spacing:-.2pt'> </span>kirim.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>19)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Seperti yang di sebutkan sebeumnya model osi lebih dari model teoritis, internet menggunakan protokol TCP/IP bukan stok<span style='letter-spacing:-.1pt'> </span>OSI.&#160;</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:70.9pt;text-align:justify;text-indent:-21.25pt;line-height:
+150%;text-autospace:none'><span style=''><img width="526" height="338" id="image39.png" src="../Images/image006.jpg"/></span></p>
+
+    <p class="MsoBodyText" style='margin-top:.05pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:49.65pt;margin-bottom:.0001pt'><span lang="EN-US" style=''>Manfaat penggunaan OSI sebagai berikut:</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:.1pt;margin-bottom:
+0cm;margin-left:134.4pt;text-align:justify;text-indent:-84.75pt;line-height:
+145%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>1)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:145%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:145%;'>Membuat peralatan vendor yang berbeda dapat saling bekerjasama</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:.9pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+145%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>2)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:145%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:145%;'>Membuat stadarisasi yang didapat dipakai vendor untuk mengurangi kerumitan perancangan</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:.6pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:134.4pt;text-align:justify;text-indent:-84.75pt;line-height:
+normal;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>3)</span><span lang="EN-US" style='font-size:7.0pt;
+;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;'>Standarisasi<span style='letter-spacing:-.1pt'> </span>interfaces</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:5.35pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:134.4pt;text-align:justify;text-indent:-84.75pt;line-height:
+normal;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>4)</span><span lang="EN-US" style='font-size:7.0pt;
+;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;'>Modular enginneering</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:5.35pt;margin-right:.05pt;
+margin-bottom:0cm;margin-left:134.4pt;text-align:justify;text-indent:-84.75pt;
+line-height:137%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>5)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:137%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:137%;'>Kerjasama dan komunikasi teknologi yang<span style='letter-spacing:-.1pt'> </span>berbeda</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:1.8pt;margin-right:.1pt;margin-bottom:
+0cm;margin-left:134.4pt;text-align:justify;text-indent:-84.75pt;line-height:
+137%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>6)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:137%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:137%;'>Memudahkan&#160;&#160;&#160; <span style='letter-spacing:-.05pt'>pelatihan </span>network&#160;</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:1.8pt;margin-right:.1pt;margin-bottom:
+8.0pt;margin-left:49.65pt;text-align:justify;line-height:137%'><span style='font-size:12.0pt;line-height:137%;'>Keuntungan menggunakan OSI layer :</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:.05pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>1)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Memecahkan operasional sistem jaringan yang kompleks agar mudah di<span style='letter-spacing:
+-.1pt'> </span>pelihara.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>2)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Perubahan setiap lapisan tidak mengubah lapisan yang lain. ini memudahkan produsen berkonsentrasi pada lapisan tertentu saja.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>3)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Memudahkan <span style='letter-spacing:-.05pt'>pengembangan </span>perangkat keras "plug and play" (istilah tekhnologi informasi yang mengacu kepada fitur di komputer yang memperboleh kan<span style='letter-spacing:.4pt'> </span>suatu perangkat di tambahkan ke sistem komputer tanpa harus menginstal ulang divice driver secara manual.)</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>4)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Membagi tugas tugas di setiap layer nya.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:.05pt;margin-bottom:
+0cm;margin-left:63.8pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='
+letter-spacing:-.05pt'>5)</span><span lang="EN-US" style='font-size:7.0pt;
+line-height:150%;;letter-spacing:-.05pt'>&#160;&#160; </span><span style='font-size:12.0pt;line-height:150%;'>Dapat di jadikan bahan pertimbangan trobleshooting ( merupakn pencarian sumber masalah sehingga masalah dapat di selesaikan<span style='letter-spacing:-.1pt'> </span>)</span></p>
+
+    <p class="MsoBodyText" style='margin-top:.05pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:49.65pt;margin-bottom:.0001pt'><span lang="EN-US" style=''>Kerugian menggunakan OSI layer :</span></p>
+
+    <p class="MsoBodyText" style='margin-top:.2pt;text-align:justify'><span lang="EN-US" style=''>&#160;</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:69.85pt;text-align:justify;text-indent:-18.0pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='font-size:12.0pt;line-height:
+150%;;letter-spacing:-.05pt'>1)</span><span lang="EN-US" style='font-size:7.0pt;line-height:150%;;
+letter-spacing:-.05pt'>&#160;&#160;&#160;&#160; </span><span style='font-size:
+12.0pt;line-height:150%;'>Lapisan OSI bersifat teoritis dan tidak benar benar bekerja pada fungsi yang sebenarnya.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:69.85pt;text-align:justify;text-indent:-18.0pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='font-size:12.0pt;line-height:
+150%;;letter-spacing:-.05pt'>2)</span><span lang="EN-US" style='font-size:7.0pt;line-height:150%;;
+letter-spacing:-.05pt'>&#160;&#160;&#160;&#160; </span><span style='font-size:
+12.0pt;line-height:150%;'>Implementasi dalam dunia industri jarang memiliki hubungan yang sama persis dengan lapisan pada osi<span style='letter-spacing:-.4pt'> </span>layer.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:.05pt;margin-right:-.05pt;
+margin-bottom:0cm;margin-left:69.85pt;text-align:justify;text-indent:-18.0pt;
+line-height:150%;text-autospace:none'><span lang="EN-US" style='font-size:12.0pt;
+line-height:150%;;letter-spacing:-.05pt'>3)</span><span lang="EN-US" style='font-size:7.0pt;line-height:150%;;
+letter-spacing:-.05pt'>&#160;&#160;&#160;&#160; </span><span style='font-size:
+12.0pt;line-height:150%;'>Protokol yang berbeda dalam stack melakukan fungsi yang berbeda yang membantu mengirim atau menerima pesan<span style='letter-spacing:-.1pt'> </span>keseluruhan.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:69.85pt;text-align:justify;text-indent:-18.0pt;line-height:
+150%;text-autospace:none'><span lang="EN-US" style='font-size:12.0pt;line-height:
+150%;;letter-spacing:-.05pt'>4)</span><span lang="EN-US" style='font-size:7.0pt;line-height:150%;;
+letter-spacing:-.05pt'>&#160;&#160;&#160;&#160; </span><span style='font-size:
+12.0pt;line-height:150%;'>Perubahan satu protocol tidak bersifat menyeluruh ke semua<span style='letter-spacing:-.25pt'> </span>bagian.</span></p>
+
+    <h3 class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:35.45pt;text-align:justify;text-indent:-14.15pt;line-height:
+150%;text-autospace:none' id="sigil_toc_id_34"><b><span style='font-size:12.0pt;line-height:150%;
+'>4.</span></b><b><span style='font-size:
+7.0pt;line-height:150%;'>&#160;&#160; </span></b><b><span style='font-size:12.0pt;line-height:150%;'>Internet Standar</span></b></h3>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+8.0pt;margin-left:35.45pt;text-align:justify;line-height:150%'><b><span style='font-size:12.0pt;line-height:150%;'>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span></b><span style='font-size:12.0pt;line-height:150%;'>Standar Internet (STD) adalah spesifikasi normatif teknologi atau metodologi yang berlaku ke internet. Standar internet diciptakan dan di terbitkan oleh <i>Internet Engineering Task Force</i> (IETF). Standar internet digunakan untuk menutupi interoperabilitas sistem di internet melalui pendefinisiakan protokol, format pesan, skema, dan bahasa.</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+8.0pt;margin-left:35.45pt;text-align:justify;line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;</span></p>
+
+    <h2 class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+8.0pt;margin-left:35.45pt;text-align:justify;line-height:150%' id="sigil_toc_id_35"><b><span style='font-size:20.0pt;line-height:150%;'>Rangkuman</span></b></h2>
+
+    <p class="MsoListParagraph" style='margin-left:14.2pt;text-align:justify;
+text-indent:21.25pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>Sistem komunikasi data memiliki fungsi dalam memberikan informasi kepada orang yang tepat dengan tepat waktu, memberikan informasi / data terbaru (<i>up-todate</i>). Jadi komunikasi data adalah suatu system yang dipergunakan <span style='letter-spacing:-.05pt'>oleh </span>seseorang / lembaga / alat dalam memberikan suatu pesan kepada orang / lembaga / alat, dengan harapan orang dalam suatu lembaga yang menerima pesan (user) tersebut melalui suatu peralatan mengerti/memahami isi pesan<span style='letter-spacing:
+-.05pt'> </span>tersebut. </span><span lang="IN" style=''>Audio identik dengan&#160; suatu alat komunikasi yang dapat&#160; di tangkap melalui alat pendengaran. Misalnya telepon, <i>walkytalky</i>, radio dan <i>tape recorder</i>. </span><span lang="EN-US" style=''>Audio dalam sistem komunikasi bercirikan video, sinyal elektrik digunakan untuk membawa unsur bunyi. Istilah ini juga biasa digunakan untuk menerangkan sistem-sistem yang berkaitan dengan proses perekaman dan transmisi yaitu sistem pengambilan / penangkapan suara, sambungan transmisi pembawa bunyi, amplifier dan lainnya. Sedangkan </span><span style='font-size:12.0pt;line-height:150%;
+'>Komunikasi video identik dengan suatu bentuk komunikasi yang di tangkap melalui alat penglihatan atau visual. Salah satu kelebihan komunikasi video adalah bisa berkomunikasi melihat seseorang&#160; atau melihat kejadian di suatu tempat di zona yang berbeda atau di tempat yang berbeda, tanpa harus berada di zona atau tempat yang bersamaan. Misalnya CCTV (<i>Closed Circuit Television</i>) dan siaran TV. Gabungan dari audio dan video atau Komunikasi audio video ( audio visual ) indentik dengan gabungan antara komunikasi audio dan komunikasi video. Komunikasi dapat di tangkap melalui alat pendengaran dan pengihatan atau visual dalam bentuk pengolahan-pengolahan pesan-pesan untuk tujuan sosial atau komersial, dari individu atau kelompok yang ditunjukan kepada individu atau kelompok lainnya. Beberapa jenis komunikasi audio visual di antaranya : Televisi, VCD player, DVD player, <i>Video Call</i>, <i>Video Conference/Teleconference</i>, computer.</span></p>
+
+    <p class="MsoListParagraph" style='margin-left:14.2pt;text-align:justify;
+text-indent:21.25pt;line-height:150%'><span style='font-size:12.0pt;line-height:
+150%;'>Jaringan telekomunikasi dirancang untuk melayani beragam pengguna yang menggunakan berbagai macam perangkat yang berasal dari vendor yang berbeda.</span><span style=''> </span><span lang="EN-US" style=''>Untuk merencanakan dan membangun suatu jaringan secara efektif, diperlukan&#160; suatu standard yang menjamin interoperability, compatibility, dan kinerja yang dipersyaratkan secara<span style='letter-spacing:-.05pt'> </span>ekonomis.</span><span lang="IN" style=''>&#160;</span><span lang="EN-US" style=''>Suatu standard yang terbuka (<i>open standard</i>) diperlukan untuk memungkinkan interkoneksi sistem, perangkat maupun jaringan yang berasal dari vendor maupun operator yang berbeda.</span></p>
+
+    <p class="MsoBodyText" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+21.8pt;line-height:150%'><span lang="EN-US" style=''>Standar berfungsi sebagai acuan bagi siapa saja yang akan merancang perangkat keras, perangkat lunak dan protokol komunikasi data. Jika tidak demikian, setiap pabrik akan membuat perangkat sesuai dengan spesifikasi sendiri, akibatnya tidak terjadi inter-operabilitas apabila dihubungkan dengan perangkat komunikasi yang dibuat oleh perusahaan<span style='letter-spacing:-.05pt'> </span>lain. Terdapat dua macam model standar yang dipakai secara luas untuk komunikasi data pada saat ini, yaitu model <i>Open System Interconnection</i> (OSI) dan model TCP/IP yang telah menjadi standar <i>defacto</i> Internet</span></p>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+8.0pt;margin-left:35.45pt;text-align:justify;line-height:150%'><b><span style='font-size:12.0pt;line-height:150%;'>&#160;</span></b></p>
+
+    <h2 class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+8.0pt;margin-left:35.45pt;text-align:justify;line-height:150%' id="sigil_toc_id_36"><b><span style='font-size:20.0pt;line-height:150%;'>Video Pembelajaran</span></b></h2>
+
+    <video controls="controls" src="../Video/KOMUNIKASI%20DATA.mp4">KOMUNIKASI DATA</video>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+8.0pt;margin-left:35.45pt;text-align:justify;line-height:150%'><b><span style='font-size:20.0pt;line-height:150%;'>&#160;</span></b></p>
+
+    <h2 class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+8.0pt;margin-left:35.45pt;text-align:justify;line-height:150%' id="sigil_toc_id_37"><b><span style='font-size:20.0pt;line-height:150%;'>Latihan Soal</span></b></h2>
+
+
+    <div class="petunjuk">
+      Kerjakan soal-soal berikut dengan memilih jawaban yang paling tepat!
+    </div>
+
+    <br/>
+
+    <form id="quizForm"><h3>1. Apa pengertian dari Komunikasi Data?</h3>
+
+<label> <input type="radio" name="q1" value="a"/> a. Sistem untuk menyimpan data </label><br/><br/><label> <input type="radio" name="q1" value="b"/> b. Proses mentransfer data dari satu tempat ke tempat lain </label><br/><br/><label> <input type="radio" name="q1" value="c"/> c. Pengolahan data menjadi informasi </label><br/><br/><label> <input type="radio" name="q1" value="d"/> d. Komunikasi melalui surat elektronik </label><br/><br/>
+
+    <h3>2. Model Komunikasi Data yang bersifat "Dua arah bisa bersamaan" disebut?</h3>
+
+<label> <input type="radio" name="q2" value="a"/> a. Simplex </label><br/><br/><label> <input type="radio" name="q2" value="b"/> b. Half Duplex </label><br/><br/><label> <input type="radio" name="q2" value="c"/> c. Full Duplex </label><br/><br/><label> <input type="radio" name="q2" value="d"/> d. Multiplex </label><br/><br/>
+
+    <h3>3. Apa fungsi Protokol dalam komunikasi data?</h3>
+
+<label> <input type="radio" name="q3" value="a"/> a. Mengirim data melalui saluran </label><br/><br/><label> <input type="radio" name="q3" value="b"/> b. Menyimpan data dalam bentuk digital </label><br/><br/><label> <input type="radio" name="q3" value="c"/> c. Aturan yang harus disepakati untuk berkomunikasi </label><br/><br/><label> <input type="radio" name="q3" value="d"/> d. Menerima data dari pengirim </label><br/><br/>
+
+    <h3>4. Media pengiriman data yang terbuat dari kaca yang menyalurkan cahaya sebagai pembawa sinyal disebut?</h3>
+
+<label> <input type="radio" name="q4" value="a"/> a. Kabel Twisted Pair </label><br/><br/><label> <input type="radio" name="q4" value="b"/> b. Kabel Coaxial </label><br/><br/><label> <input type="radio" name="q4" value="c"/> c. Optical Fiber </label><br/><br/><label> <input type="radio" name="q4" value="d"/> d. Wireless </label><br/><br/>
+
+    <h3>5. Jenis media pengiriman data yang menggunakan medium udara sebagai media penyaluran sinyal elektromagnetik adalah?</h3>
+
+<label> <input type="radio" name="q5" value="a"/> a. Wireless </label><br/><br/><label> <input type="radio" name="q5" value="b"/> b. Wired </label><br/><br/><label> <input type="radio" name="q5" value="c"/> c. Optical </label><br/><br/><label> <input type="radio" name="q5" value="d"/> d. Coaxial </label><br/><br/>
+
+    <h3>6. Apa yang dimaksud dengan Standar Defacto?</h3>
+
+<label> <input type="radio" name="q6" value="a"/> a. Standar resmi suatu negara </label><br/><br/><label> <input type="radio" name="q6" value="b"/> b. Standar yang diterima oleh banyak pihak secara sukarela </label><br/><br/><label> <input type="radio" name="q6" value="c"/> c. Standar yang disusun oleh badan internasional </label><br/><br/><label> <input type="radio" name="q6" value="d"/> d. Standar yang hanya berlaku di satu industri tertentu </label><br/><br/>
+
+    <h3>7. Organisasi apa yang bertanggung jawab untuk merancang standardisasi protokol TCP/IP untuk Internet?</h3>
+
+<label> <input type="radio" name="q7" value="a"/> a. IEEE </label><br/><br/><label> <input type="radio" name="q7" value="b"/> b. ITU </label><br/><br/><label> <input type="radio" name="q7" value="c"/> c. ISO/IEC </label><br/><br/><label> <input type="radio" name="q7" value="d"/> d. IETF </label><br/><br/>
+
+    <h3>8. Apa peran dari International Telecommunication Union (ITU)?</h3>
+
+<label> <input type="radio" name="q8" value="a"/> a. Membuat standar untuk jaringan telekomunikasi publik </label><br/><br/><label> <input type="radio" name="q8" value="b"/> b. Mengatur standar dalam lingkungan Amerika </label><br/><br/><label> <input type="radio" name="q8" value="c"/> c. Menetapkan standar resmi di Indonesia </label><br/><br/><label> <input type="radio" name="q8" value="d"/> d. Bertanggung jawab terhadap arsitektur Internet </label><br/><br/>
+
+    <h3>9. Berapa jumlah layer pada model OSI?</h3>
+
+<label> <input type="radio" name="q9" value="a"/> a. 5 </label><br/><br/><label> <input type="radio" name="q9" value="b"/> b. 6 </label><br/><br/><label> <input type="radio" name="q9" value="c"/> c. 7 </label><br/><br/><label> <input type="radio" name="q9" value="d"/> d. 8 </label><br/><br/>
+
+    <h3>10. Apa fungsi dari Presentation Layer pada model OSI?</h3>
+
+<label> <input type="radio" name="q10" value="a"/> a. Mengontrol dialog antara sistem-sistem </label><br/><br/><label> <input type="radio" name="q10" value="b"/> b. Melakukan proses translasi informasi </label><br/><br/><label> <input type="radio" name="q10" value="c"/> c. Menghantarkan data dalam bentuk frame </label><br/><br/><label> <input type="radio" name="q10" value="d"/> d. Membawa bit-bit data melalui media transmisi </label><br/><br/><br/><br/><button type="button" onclick="gradeQuiz()">Simpan</button></form>
+
+    <div id="results"></div>
+
+    <p class="MsoListParagraph" style='margin-top:0cm;margin-right:-.05pt;margin-bottom:
+8.0pt;margin-left:35.45pt;text-align:justify;line-height:150%'><b><span style='font-size:20.0pt;line-height:150%;'>&#160;</span></b></p>
+
+    <h2 class="MsoNormal" style='margin-right:-.05pt;text-align:justify;text-indent:
+35.45pt;line-height:150%' id="sigil_toc_id_38"><b><span style='font-size:20.0pt;line-height:150%'>Daftar Pustaka </span></b></h2>
+
+    <p class="MsoListParagraph" style='text-align:justify;line-height:150%'><span style='font-size:12.0pt;line-height:150%;'>&#160;</span><a href="https://www.awonapa.com/2021/07/kumpulan-materi-dasar-tjkt.html"><span style='font-size:12.0pt;line-height:150%;;
+color:windowtext'>https://www.awonapa.com/2021/07/kumpulan-materi-dasar-tjkt.html</span></a><span style='font-size:12.0pt;line-height:150%;'> </span></p>
+
+    <p class="MsoListParagraph" style='text-align:justify;line-height:150%'><a href="https://markey.id/blog/technology/wireless-lan-adalah"><span style='font-size:12.0pt;line-height:150%;;
+color:windowtext'>https://markey.id/blog/technology/wireless-lan-adalah</span></a><span style='font-size:12.0pt;line-height:150%;'> </span></p>
+
+    <p class="MsoListParagraph" style='text-align:justify;line-height:150%'><a href="https://qwords.com/blog/layanan-internet/"><span style='font-size:12.0pt;
+line-height:150%;;color:windowtext'>https://qwords.com/blog/layanan-internet/</span></a></p>
+
+    <p class="MsoNormal" style='text-align:justify;line-height:150%'>&#160;</p>
+  </div>
+</body>
+</html>
